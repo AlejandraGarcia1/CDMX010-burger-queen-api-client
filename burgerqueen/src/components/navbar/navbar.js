@@ -1,4 +1,3 @@
-import React from 'react';
 import './Navbar.css';
 import logo from '../../images/logo.png';
 import salir from '../../images/salir.png';
@@ -20,6 +19,6 @@ function Navbar() {
 		</div>
 		</header>
 	)
-}
+};
 
 export default Navbar;
