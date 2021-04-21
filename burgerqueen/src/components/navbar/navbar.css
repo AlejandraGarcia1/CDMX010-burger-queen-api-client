@@ -1,3 +1,49 @@
-.menu{
-    background-color: blue;
+header{
+	display: inline-block;
+	width: 100%;
+	background-color: #F3C574;
+	position: relative;
+}
+
+.logo{
+	float: left;	
+}
+
+.burger{
+	margin-left: 44px;
+	height: 88px;
+}
+
+.salirApp{
+	height: 47px;
+	margin-right: 4px;
+}
+
+.nav{
+	float: right;
+}
+
+.nav ul{
+	display: flex;
+	flex-direction: row;
+	padding-top: 10px;
+}
+
+.nav ul li{
+	display: inline-block;
+	padding-right: 40px;
+	text-align: center;
+	font-size: large;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	/* padding-bottom: 10px; */
+	display: inline-block;
+	color: black;
+	font-weight: 600;
+}
+
+.navMenu{
+	margin-top: 10px;
 }
