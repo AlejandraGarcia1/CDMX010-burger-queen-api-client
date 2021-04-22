@@ -1,0 +1,46 @@
+.menus{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    font-size: 15px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+
+.desayunos h3 , .comidas h3{
+    margin: auto, 0;
+    text-align: center;
+  background-color:#c89b6ed3;
+  width: 250px;
+  height: 30px;
+  border-radius: 20px;
+  border:none;
+    
+}
+
+.desayunos h3 i, .comidas h3 i{
+  height: 40px;
+  padding:0 40px;
+  
+  
+}
+.desayunos ul , .comidas ul{
+    background-color: rgb(197, 193, 193);
+    list-style: none;
+    border: 1px solid rgb(182, 172, 172);
+    text-align: left;
+    line-height: 1.5rem;
+    width: 200px;
+    font-weight: bolder;
+}
+
+.desayuno{
+  display: none;
+}
+
+.comida{
+  display: none;
+}
+
