@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './Titulo.css';
 
-function Titulo(){
+function Titulo () {
 	return(
 		<div>
 			<div className = "lista">
