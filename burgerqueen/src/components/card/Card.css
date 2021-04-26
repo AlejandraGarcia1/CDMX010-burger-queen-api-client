@@ -2,7 +2,7 @@
 	background-color: #E5E5E5;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 4px;
-	width: 480px;
+	width: 500px;
 }
 
 .lineCard{
@@ -64,11 +64,15 @@
 
 .cardButton{
 	background: #437C0E;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 2px 2px 2px 1px rgba(62, 58, 58, 0.276);
 	border-radius: 7px;
 	color: white;
 	width: 145px;
 	height: 39px;
+	font-size: 16px;
 	cursor: pointer;
+	margin-top: 20px;
+	margin-left: 354px;
+	border: none;
 }
 

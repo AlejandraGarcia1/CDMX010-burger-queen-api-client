@@ -29,13 +29,13 @@ function Card () {
 			</div>
 			<div className = "counter">					
 						<img src = { izquierda } alt = "izquierda" className = "izquierda"/>
-						<div className = "number">0</div>
+						<div className = "number"> 0 </div>
 						<img src = { derecha } alt = "derecha" className = "derecha"/>				
 			</div>
 			</div>
 		</div>
 		<div>
-			<button className = "cardButton">Agregar</button>
+			<button className = "cardButton"> Agregar </button>
 		</div>
 		</section>
 	)

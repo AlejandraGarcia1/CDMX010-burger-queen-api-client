@@ -5,16 +5,28 @@ import Titulo from '../titulo/Titulo';
 import Menu from '../menu/Menu';
 import Card from '../card/Card';
 import Orden from '../orden/Orden';
+import Footer from '../fotter/Footer';
 
 function Main() {
   return (
-    <div>
-			<Navbar />
-			<Titulo />
-			<Menu />
-			<Card />
-			<Orden />
-      <h1>Hola</h1>
+    <div>			
+				<Navbar />		
+				<Titulo />
+
+			<div className = "mainCenter">
+				<div className = "mainMenu">
+					<Menu />
+				</div>
+				<div className = "mainCard">
+					<Card />
+				</div>
+			</div>
+
+			<div className = "mainOrden">
+				<Orden /> 
+			</div>
+
+			<Footer />		     
     </div>
   )
 };

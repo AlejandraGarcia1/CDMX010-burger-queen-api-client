@@ -1,8 +1,9 @@
 import './Orden.css'
 
 function Order(){
-    return <div className="order">
-        <h2>Orden</h2>
+    return(
+			<div className = "order">
+        <p className = "orden"> Orden </p>
        <hr className="division"></hr>
        <table className="ordenCompleta">
         <tr>
@@ -30,6 +31,7 @@ function Order(){
         <hr className="segundaDivision"></hr>
         <button className="ordenar">Ordenar</button>
     </div>
+		)
 } 
 
 export default Order;

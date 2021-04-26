@@ -1,0 +1,20 @@
+.mainCenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mainCard{
+	margin-left: 200px;
+	margin-top: 50px;
+	
+}
+
+.mainOrden{
+	margin-top: 100px;
+}
+
+.mainMenu{
+	/* margin-top: -330px; */
+	
+}

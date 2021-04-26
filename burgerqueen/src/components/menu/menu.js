@@ -14,44 +14,54 @@ function Menu () {
   }
 
   return (
-    <section className="menus">
-      <h2>Menú</h2>
-      <div className="desayunos">
-        <h3 onClick={desplegar}>
+    <section className = "menus">
+      <p className = "menu"> Menú </p>
+      <div className = "desayunos">
+				
+        <p onClick = {desplegar}>
           Desayunos <i class="fas fa-angle-down"></i>
-        </h3>
+        </p>
+
         <ul className="desayuno" id="menu">
-          <li>Café americano </li>
-          <li>Café con leche</li>
-          <li>Sandwich de jamón y queso</li>
-          <li>Jugo de frutas natural</li>
+          <li> Café americano </li>
+          <li> Café con leche </li>
+          <li> Sandwich de jamón y queso </li>
+          <li> Jugo de frutas natural </li>
         </ul>
       </div >
-      <div className="comidas">
+
+      <div className = "comidas">
         
-        <h3 onClick={desplegarComida}>
+        <p onClick = {desplegarComida} className = "category">
           Comidas y cenas <i class="fas fa-angle-down"></i>
-        </h3>
-        <div className="comida" id="menuDos">
-        <p>Hamburguesas</p>
+        </p>
+
+        <div className = "comida" id="menuDos">
+
+        <p className = "subcategory"> Hamburguesas </p>
+
         <ul>
-          <li>Hamburguesas simples</li>
-          <li>Hamburguesa doble</li>
+          <li> Hamburguesas simples </li>
+          <li> Hamburguesa doble </li>
         </ul>
-        <p>Acompañamientos</p>
+
+        <p className = "subcategory"> Acompañamientos </p>
         <ul>
-          <li>Papas fritas</li>
-          <li>Aros de cebolla</li>
+          <li> Papas fritas </li>
+          <li> Aros de cebolla </li>
         </ul>
-        <p> Para tomar </p>
+
+        <p className = "subcategory"> Para tomar </p>				
         <ul>
-          <li>Agua 500ml</li>
-          <li>Agua 750ml</li>
-          <li>Bebida/Gaseosa 500ml</li>
-          <li>Bebida/Gaseosa 710ml</li>
+          <li> Agua 500ml </li>
+          <li> Agua 750ml </li>
+          <li> Bebida/Gaseosa 500ml </li>
+          <li> Bebida/Gaseosa 710ml </li>
         </ul>
-        </div>
+
+        </div>				
       </div>
+
     </section>
   )
 };

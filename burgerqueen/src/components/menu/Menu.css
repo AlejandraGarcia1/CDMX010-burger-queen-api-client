@@ -4,41 +4,90 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 300px;
-	font-size: 15px;
- font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+	font-size: 15px; 
 }
 
-.desayunos h3 , .comidas h3{
+.menu{
+	font-size: xx-large;
+}
+
+.desayunos p{
 	margin: auto, 0;
 	text-align: center;
-background-color:#c89b6ed3;
-width: 250px;
-height: 30px;
-border-radius: 20px;
-border:none;	
+	background: rgba(200, 155, 110, 0.79);
+	box-shadow: 2px 2px 2px 1px rgba(62, 58, 58, 0.276);
+	width: 250px;
+	height: 30px;
+	border-radius: 7px;
+	border:none;	
+	cursor: pointer;
+	font-size: larger;
+	padding: 3%;
+	font-weight: 500;
 }
 
-.desayunos h3 i, .comidas h3 i{
-height: 40px;
-padding:0 40px;
-
+.category{
+	margin: auto, 0;
+	text-align: center;
+	background: rgba(200, 155, 110, 0.79);
+	box-shadow: 2px 2px 2px 1px rgba(62, 58, 58, 0.276);
+	width: 250px;
+	height: 30px;
+	border-radius: 7px;
+	border:none;	
+	cursor: pointer;
+	font-size: larger;
+	padding: 3%;
+	font-weight: 500;
 
 }
+
+.subcategory{
+	margin: auto, 0;
+	text-align: center;
+	background: #bdac98;
+	width: 250px;
+	height: 30px;
+	border-radius: 7px;
+	border:none;	
+	cursor: pointer;
+	font-size: larger;
+	padding: 3%;
+	font-weight: 500;
+}
+
+.comidas ul li{
+	padding-top: 5%;
+	cursor: pointer;
+}
+
+.desayunos p i, .comidas p i{
+	height: 40px;
+	padding:0 40px;
+}
+
 .desayunos ul , .comidas ul{
-	background-color: rgb(197, 193, 193);
+	background-color: #F2F2F2;	
 	list-style: none;
-	border: 1px solid rgb(182, 172, 172);
+	border-color: #F2F2F2;	
 	text-align: left;
 	line-height: 1.5rem;
-	width: 200px;
-	font-weight: bolder;
+	width: 228px;
+	font-weight: 400;
+	margin-top: -20px;
+	padding-bottom: 5%;
+	font-size: medium;
 }
 
-.desayuno{
-display: none;
+.desayunos ul li{
+	padding-top: 5%;
+	cursor: pointer;
+}
+
+.desayuno{	
+	display: none;	
 }
 
 .comida{
-display: none;
+	display: none;
 }
