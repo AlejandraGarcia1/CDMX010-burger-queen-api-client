@@ -1,0 +1,74 @@
+.backgroundCard{
+	background-color: #E5E5E5;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	width: 480px;
+}
+
+.lineCard{
+	width: 419px;
+	height: 0px;
+	left: 323px;
+	top: 456px;
+	border: 1px solid #000000;
+}
+
+.hamburguesa{
+	width: 100%;
+}
+
+.titulo{
+	font-size: 35px;
+	padding-top: 40px;
+}
+
+.cardMenu{	
+	font-size: large;
+}
+
+.listCard{
+	display: flex;
+}
+
+.izquierda{
+	height: 40px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.number{
+	background-color: white;	
+	height: 40px;
+	width: 40px;	
+	font-size: xx-large;
+	padding-bottom: 3px;
+}
+
+.counter{
+	display: flex;
+	flex-direction: row;
+	margin-left: 175px;
+	margin-top: 80px;
+}
+
+.derecha{
+	height: 40px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.ingredients{
+	display: flex;
+	flex-direction: row;
+}
+
+.cardButton{
+	background: #437C0E;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	color: white;
+	width: 145px;
+	height: 39px;
+	cursor: pointer;
+}
+

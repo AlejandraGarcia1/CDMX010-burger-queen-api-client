@@ -1,0 +1,53 @@
+.lista{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mesa{
+	font-size: 300%;
+	font-weight:600;
+}
+
+.selectTable{
+	height: 48PX;
+	margin-left: 15px;	
+	width: 60px;
+	cursor: pointer;
+	border:2px solid rgba(0,0,0,0.2);
+	border-radius: 5%;
+	font-size: 1em;	
+}
+
+.number{
+	justify-content: center;
+}
+
+.cliente{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -3%;
+}
+
+.nombreInput{
+	margin-left: 15px;
+	height: 20px;
+	border: 2px solid rgba(0,0,0,0.2);	
+}
+
+.nombreInput:hover{
+	border: 2px solid rgba(0,0,0,0.2);
+}
+
+.nombre{
+	font-size: 30px;
+	font-weight:500;
+}
+
+.line{
+	border: 1px solid #000000;	
+  height: 0px;
+  max-width: 600px; 
+}
+
