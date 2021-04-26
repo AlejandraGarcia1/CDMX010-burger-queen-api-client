@@ -1,14 +1,17 @@
 import React from 'react'
 import './Main.css';
-import Navbar from '../navbar/Navbar'
-import Titulo from '../titulo/Titulo'
+import Navbar from '../Navbar/Navbar'
+import Titulo from '../Titulo/Titulo'
+import Menu from '../Menu/Menu';
+import Order from '../Orden/Orden';
 
 function Main() {
   return (
     <div>
 			<Navbar />
 			<Titulo />
-      <h1>Hola</h1>
+      <Menu />
+      <Order />
     </div>
   )
 };
