@@ -2,7 +2,7 @@ import './App.css';
 //componets
 import Navbar from './components/navbar/Navbar'
 import Menu from './components/menu/Menu'
-import Order from './components/orden/orden';
+import Order from './components/orden/Orden';
 
 function App() {
   return (
