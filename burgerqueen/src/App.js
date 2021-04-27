@@ -1,10 +1,10 @@
 import './App.css';
-import Main from './components/main/Main';
+import GetOrder from '../src/components/getOrder/GetOrder';
 
 function App() {
   return (
     <div className="App">      
-			<Main />
+			<GetOrder />
     </div>
   )
 };

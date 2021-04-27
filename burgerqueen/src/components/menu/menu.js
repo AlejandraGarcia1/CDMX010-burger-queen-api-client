@@ -2,6 +2,8 @@ import React from "react";
 import "./Menu.css";
 
 function Menu () {
+	//{ breakfast }
+
 	// Función para desplegar el menú 
   function desplegar () {    
     let menu = document.getElementById("menu");
@@ -21,7 +23,6 @@ function Menu () {
         <p onClick = {desplegar}>
           Desayunos <i class="fas fa-angle-down"></i>
         </p>
-
         <ul className="desayuno" id="menu">
           <li> Café americano </li>
           <li> Café con leche </li>

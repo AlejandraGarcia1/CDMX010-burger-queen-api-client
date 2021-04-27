@@ -2,6 +2,7 @@ import React from 'react';
 import './Titulo.css';
 
 function Titulo () {
+		
 	return(
 		<div>
 			<div className = "lista">
