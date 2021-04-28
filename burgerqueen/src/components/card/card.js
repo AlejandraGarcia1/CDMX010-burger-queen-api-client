@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Card.css';
 import hamburguesa from '../../images/hamburpng.png';
 import derecha from '../../images/derecha.png';
 import izquierda from '../../images/izquierda.png';
 
 function Card () {
+	const [contador, setContador] = useState(0);
+	const sumar = () => setContador(contador + 1);
+	const restar = () => setContador(contador !== 0 ? contador -1 : contador)
+
 	return (
 		<section>
 		<div className = "backgroundCard">
@@ -28,9 +32,9 @@ function Card () {
 				</div>
 			</div>
 			<div className = "counter">					
-						<img src = { izquierda } alt = "izquierda" className = "izquierda"/>
-						<div className = "number"> 0 </div>
-						<img src = { derecha } alt = "derecha" className = "derecha"/>				
+						<img onClick = { restar } src = { izquierda } alt = "izquierda" className = "izquierda"/>
+						<div className = "number"> { contador } </div>
+						<img onClick = { sumar } src = { derecha } alt = "derecha" className = "derecha"/>				
 			</div>
 			</div>
 		</div>
