@@ -1,29 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Menu.css";
 
 function Menu () {
 	//{ breakfast }
+	// -------------------
 
-	// Función para desplegar el menú 
-  function desplegar () {    
-    let menu = document.getElementById("menu");
-    menu.classList.toggle("desayuno");    
-  }
-
-  function desplegarComida() {
-    let menuDos = document.getElementById("menuDos");
-    menuDos.classList.toggle("comida");
-  }
+	const [desplegar, setDesplegar] = useState(false);
+	const desayuno = () => setDesplegar(!desplegar);
+	console.log(desplegar)	
 
   return (
     <section className = "menus">
       <p className = "menu"> Menú </p>
       <div className = "desayunos">
 				
-        <p onClick = {desplegar}>
+        <p onClick = { desayuno }>					
           Desayunos <i class="fas fa-angle-down"></i>
-        </p>
-        <ul className="desayuno" id="menu">
+        </p>				
+        <ul desplegar = { desplegar } className="desayuno" id="menu">
           <li> Café americano </li>
           <li> Café con leche </li>
           <li> Sandwich de jamón y queso </li>
@@ -33,7 +27,7 @@ function Menu () {
 
       <div className = "comidas">
         
-        <p onClick = {desplegarComida} className = "category">
+        <p className = "category">
           Comidas y cenas <i class="fas fa-angle-down"></i>
         </p>
 
