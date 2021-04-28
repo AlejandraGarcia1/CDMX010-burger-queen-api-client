@@ -1,12 +1,13 @@
 .mainCenter{
 	display: flex;
-	align-items: center;
-	justify-content: center;
+    align-items: stretch;
+    justify-content: space-around;
 }
 
+
 .mainCard{
-	margin-left: 200px;
-	margin-top: 50px;
+	/* margin-left: 200px;
+	margin-top: 50px; */
 	
 }
 
