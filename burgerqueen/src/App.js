@@ -1,10 +1,10 @@
 import './App.css';
-import GetOrder from '../src/components/getOrder/GetOrder';
+import Paths from '../src/components/router/Router';
 
 function App() {
   return (
-    <div className="App">      
-			<GetOrder />
+    <div className="App">
+			<Paths />
     </div>
   )
 };
