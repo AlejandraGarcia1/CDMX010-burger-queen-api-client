@@ -2,52 +2,30 @@ import React, {useEffect, useState} from "react";
 import "./Menu.css";
 
 function Menu () {
-	//Hook que almacena el menu
-	const [items, setItems] = useState([]);
+	// Hook que almacena el menu	
+	const [items, setItems] = useState([])
+
 	const [desplegar, setDesplegar] = useState(false);
 	const desayuno = () => setDesplegar(!desplegar);
+	const comida = () => setDesplegar(!desplegar);
 	console.log('estatus de desplegar:', desplegar)	
 
 	//Función que ejecuta la petición
 	useEffect(() => {
 		obtenerDatos()
-	}, [])
+	})
 
-	//función que solicita el menu
-	const obtenerDatos = async () => {		
-		const data = await fetch('https://api.sheety.co/9c52546974faa807ce11d555f82049e5/theBurgerLover/productos')
-		console.log('soy la peticion', data)
+	//Función que solicita el menu
+	const obtenerDatos = async () => {
+		const data = await fetch('http://localhost:3000/menu')
+		console.log('soy la petición', data)
 		console.log('estatus', data.status)
 
-		// Guardamos la respuesta en formato JSON - Es await porque tambien esperamos esta respuesta	
+		//Guardamos la respuesta en formato JSON - es await porque esperamos la respuesta
 		const dataJson = await data.json()
 		setItems(dataJson)
-		console.log('data Json', dataJson)
+		console.log('data json', dataJson)
 	}
-
-	// -----------------------------------------------
-
-	// const url = 'https://api.sheety.co/9c52546974faa807ce11d555f82049e5/theBurgerLover/productos'
-
-	// // Hook que almacena el menu
-	// const [menu, setMenu] = useState()
-
-	// //Función que solicita el menu
-	// const fetchApi = async () => {
-	// 	const response = await fetch(url)
-	// 	console.log(response.status)
-	// 	// Guardamos la respuesta en formato JSON - Es await porque tambien esperamos esta respuesta
-	// 	const responseJson = await response.json()
-	// 	setMenu(responseJson)
-	// 	console.log('aqui', responseJson)
-	// }
-
-	// //Hook que ejecuta la función de la petición
-	// useEffect(() => {
-	// 	fetchApi()
-	// }, [])
-
-	// ----------------------------------------------------
 
   return (
     <section className = "menus">
@@ -63,41 +41,43 @@ function Menu () {
 						<li> Café con leche </li>
 						<li> Sandwich de jamón y queso </li>
 						<li> Jugo de frutas natural </li>
-					</ul>				
+					</ul>			
 				}
       </div >
 
       <div className = "comidas">
         
-        <p className = "category">
+        <p onClick = { comida } className = "category">
           Comidas y cenas <i class="fas fa-angle-down"></i>
         </p>
+				{desplegar &&
+					<div className = "comida" id="menuDos">
 
-        <div className = "comida" id="menuDos">
+									<p className = "subcategory"> Hamburguesas </p>
 
-        <p className = "subcategory"> Hamburguesas </p>
+									<ul>
+										<li> Hamburguesas simples </li>
+										<li> Hamburguesa doble </li>
+									</ul>
 
-        <ul>
-          <li> Hamburguesas simples </li>
-          <li> Hamburguesa doble </li>
-        </ul>
+									<p className = "subcategory"> Acompañamientos </p>
+									<ul>
+										<li> Papas fritas </li>
+										<li> Aros de cebolla </li>
+									</ul>
 
-        <p className = "subcategory"> Acompañamientos </p>
-        <ul>
-          <li> Papas fritas </li>
-          <li> Aros de cebolla </li>
-        </ul>
-
-        <p className = "subcategory"> Para tomar </p>				
-        <ul>
-          <li> Agua 500ml </li>
-          <li> Agua 750ml </li>
-          <li> Bebida/Gaseosa 500ml </li>
-          <li> Bebida/Gaseosa 710ml </li>
-        </ul>
-        </div>				
-      </div>
-
+									<p className = "subcategory"> Para tomar </p>				
+									<ul>
+										<li> Agua 500ml </li>
+										<li> Agua 750ml </li>
+										<li> Bebida/Gaseosa 500ml </li>
+										<li> Bebida/Gaseosa 710ml </li>
+									</ul>
+									</div>				
+								
+				}
+				</div>
+			
 				{/* <ul>
 					{
 							items.map(item => (							
@@ -105,12 +85,7 @@ function Menu () {
 						))						
 					}					
 				</ul> */}
-
-				{/* <ul>
-					{ !menu ? 'Cargando menu' : menu.map ((menu ,index) => {
-						return <li>{menu.tipo}</li>
-					}) }
-				</ul> */}
+        
 
     </section>
   )

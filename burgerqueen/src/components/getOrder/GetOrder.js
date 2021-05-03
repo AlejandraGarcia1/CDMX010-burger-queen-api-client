@@ -10,14 +10,14 @@ import Footer from '../fotter/Footer';
 
 import './GetOrder.css';
 
-//MockAPI
-let url = 'https://api.sheety.co/9c52546974faa807ce11d555f82049e5/theBurgerLover/productos';
-		fetch(url)
-		.then((response) => response.json())
-		.then(json => {
-			// Do something with the data
-			console.log(json.productos);
-	});
+//MockAPI Shety
+// let url = 'https://api.sheety.co/9c52546974faa807ce11d555f82049e5/theBurgerLover/productos';
+// 		fetch(url)
+// 		.then((response) => response.json())
+// 		.then(json => {
+// 			// Do something with the data
+// 			console.log(json.productos);
+// 	});
 
 function GetOrder() {
 	// const [breakfast, setBreakfast] = useState({});

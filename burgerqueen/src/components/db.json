@@ -1,0 +1,22 @@
+{ 
+  "menu": [ 
+    { 
+      "id": 1, 
+      "tipo": "Desayuno", 
+      "producto": "Café americano", 
+      "precio": 5 
+    }, 
+    { 
+      "id": 2, 
+      "tipo":"Desayuno", 
+      "producto":"Café con leche", 
+      "precio":"7" 
+    }, 
+    { 
+      "id": 3, 
+      "tipo":"Desayuno", 
+      "producto":"Sandwich de jamon y queso", 
+      "precio": "10"
+    } 
+  ] 
+}
