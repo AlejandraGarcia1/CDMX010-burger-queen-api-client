@@ -1,9 +1,10 @@
 import React from 'react';
+import Title from '../title/Title';
 
 export default function OrdenLista (){
     return(
         <div>
-            <h1>hola</h1>
+            <Title />
         </div>
     )
 }
