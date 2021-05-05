@@ -1,11 +1,14 @@
 import React from 'react';
-import Card from '../card/Card';
 
-function Title() {
+
+import './Title.css'
+
+function Title(props) {
     return <div>
-        <h1>Orden lista</h1>
-        <hr></hr>
-        
+        <div className = "cliente">
+				<p className = "nombre" > {props.text}  </p>
+			</div>	
+			<hr className = "line"></hr>  
     </div>
 };
 
