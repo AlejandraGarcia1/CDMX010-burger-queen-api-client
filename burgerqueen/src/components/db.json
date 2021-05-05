@@ -1,10 +1,10 @@
 { 
-  "menu": [ 
+  "menu": [
     { 
       "id": 1, 
       "tipo": "Desayuno", 
       "producto": "Café americano", 
-      "precio": 5 
+      "precio": "5"				
     }, 
     { 
       "id": 2, 
@@ -15,8 +15,68 @@
     { 
       "id": 3, 
       "tipo":"Desayuno", 
-      "producto":"Sandwich de jamon y queso", 
+      "producto":"Sandwich de jamón y queso", 
       "precio": "10"
-    } 
-  ] 
+    },
+		{ 
+      "id": 4, 
+      "tipo":"Desayuno", 
+      "producto":"Jugo de frutas natural", 
+      "precio": "7"
+    },
+		{ 
+      "id": 5, 
+      "tipo":"Hamburguesa", 
+      "producto":"Hamburguesa simple", 
+      "precio": "10",
+			"imagen": "../../images/hamburpng.png",
+			"ingredientes": [
+        "Carne de res",
+        "Jitomate", 
+        "Lechuga", 
+        "Cebolla"]
+    },
+		{ 
+      "id": 6, 
+      "tipo":"Hamburguesa", 
+      "producto":"Hamburguesa doble", 
+      "precio": "15"
+    },		    
+		{ 
+      "id": 7, 
+      "tipo":"Acompañamiento", 
+      "producto":"Papas fritas", 
+      "precio": "5"			
+    },
+		{ 
+      "id": 8, 
+      "tipo":"Acompañamiento", 
+      "producto":"Aros de cebolla", 
+      "precio": "5"
+    },  
+		{ 
+			"id": 9, 
+			"tipo":"Bebidas", 
+			"producto":"Agua 500ml", 
+			"precio": "5"	
+		},
+		{ 
+			"id": 10, 
+			"tipo":"Bebidas", 
+			"producto":"Agua 750ml", 
+			"precio": "7"
+		},
+		{ 
+			"id": 11, 
+			"tipo":"Bebidas", 
+			"producto":"Bebida/gaseosa 500ml", 
+			"precio": "7"
+		},
+		{ 
+			"id": 12, 
+			"tipo":"Bebidas", 
+			"producto":"Bebida/gaseosa 750ml", 
+			"precio": "10"
+		}  
+	]
 }

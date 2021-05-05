@@ -4,7 +4,7 @@ import hamburguesa from '../../images/hamburpng.png';
 import derecha from '../../images/derecha.png';
 import izquierda from '../../images/izquierda.png';
 
-function Card () {
+function Card () {	
 	const [contador, setContador] = useState(0);
 	const sumar = () => setContador(contador + 1);
 	const restar = () => setContador(contador !== 0 ? contador -1 : contador);

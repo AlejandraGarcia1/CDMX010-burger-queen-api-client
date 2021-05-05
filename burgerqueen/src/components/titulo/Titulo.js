@@ -1,12 +1,12 @@
 import React from 'react';
 import './Titulo.css';
 
-function Titulo () {
+function Titulo (props) {
 		
 	return(
 		<div>
 			<div className = "lista">
-				<p className = "mesa"> Mesa N° </p>
+				<p className = "mesa"> {props.text} </p>
 				<select className = "selectTable">
 					<option className = "number"> 1 </option>
 					<option> 2 </option>

@@ -5,15 +5,17 @@ function Menu () {
 	// Hook que almacena el menu	
 	const [items, setItems] = useState([])
 
-	const [desplegar, setDesplegar] = useState(false);
-	const desayuno = () => setDesplegar(!desplegar);
-	const comida = () => setDesplegar(!desplegar);
-	console.log('estatus de desplegar:', desplegar)	
+	const [desplegarDesayuno, setDesplegarDesayuno] = useState(false);
+	const desayuno = () => setDesplegarDesayuno(!desplegarDesayuno);
+	const [desplegarComida, setDesplegarComida] = useState(false);
+	const comida = () => setDesplegarComida(!desplegarComida);
+	
+	console.log('estatus de desplegar:', desplegarDesayuno)	
 
 	//Función que ejecuta la petición
 	useEffect(() => {
 		obtenerDatos()
-	})
+	}, [])
 
 	//Función que solicita el menu
 	const obtenerDatos = async () => {
@@ -23,70 +25,53 @@ function Menu () {
 
 		//Guardamos la respuesta en formato JSON - es await porque esperamos la respuesta
 		const dataJson = await data.json()
-		setItems(dataJson)
+		setItems(dataJson)	
 		console.log('data json', dataJson)
 	}
 
   return (
     <section className = "menus">
       <p className = "menu"> Menú </p>
-      <div className = "desayunos">
-				
+      <div className = "desayunos">				
         <p onClick = { desayuno }>					
           Desayunos <i class="fas fa-angle-down"></i>
-        </p>
-				{desplegar &&
+        </p>				
+				{desplegarDesayuno &&
 					<ul className="desayuno" id="menu">
-						<li> Café americano </li>
-						<li> Café con leche </li>
-						<li> Sandwich de jamón y queso </li>
-						<li> Jugo de frutas natural </li>
+           { items.filter((elemento)=> elemento.tipo === "Desayuno").map((item, key) => 
+           <li key={key}>{item.producto}</li>)
+					 }          
 					</ul>			
-				}
+				}				
       </div >
 
-      <div className = "comidas">
-        
+      <div className = "comidas">        
         <p onClick = { comida } className = "category">
           Comidas y cenas <i class="fas fa-angle-down"></i>
         </p>
-				{desplegar &&
+				{desplegarComida &&
 					<div className = "comida" id="menuDos">
-
 									<p className = "subcategory"> Hamburguesas </p>
-
 									<ul>
-										<li> Hamburguesas simples </li>
-										<li> Hamburguesa doble </li>
+									{ items.filter((elemento)=> elemento.tipo === "Hamburguesa").map((item, key) => 
+           				<li key={key}>{item.producto}</li>)
+									 } 
 									</ul>
-
 									<p className = "subcategory"> Acompañamientos </p>
 									<ul>
-										<li> Papas fritas </li>
-										<li> Aros de cebolla </li>
+									{ items.filter((elemento)=> elemento.tipo === "Acompañamiento").map((item, key) => 
+           				<li key={key}>{item.producto}</li>)
+									 } 						
 									</ul>
-
 									<p className = "subcategory"> Para tomar </p>				
 									<ul>
-										<li> Agua 500ml </li>
-										<li> Agua 750ml </li>
-										<li> Bebida/Gaseosa 500ml </li>
-										<li> Bebida/Gaseosa 710ml </li>
+									{ items.filter((elemento)=> elemento.tipo === "Bebidas").map((item, key) => 
+           				<li key={key}>{item.producto}</li>)
+									 }										
 									</ul>
-									</div>				
-								
+					</div>		
 				}
-				</div>
-			
-				{/* <ul>
-					{
-							items.map(item => (							
-							<li key="item.id"> {item.producto} </li>
-						))						
-					}					
-				</ul> */}
-        
-
+			</div>
     </section>
   )
 };
