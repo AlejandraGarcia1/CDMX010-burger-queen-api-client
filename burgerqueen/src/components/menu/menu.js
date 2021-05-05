@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Menu.css";
 
 function Menu () {
@@ -30,10 +30,10 @@ function Menu () {
 	}
 
   return (
-    <section className = "menus">
-      <p className = "menu"> Menú </p>
-      <div className = "desayunos">				
-        <p onClick = { desayuno }>					
+    <section className="menus">
+      <p className="menu"> Menú </p>
+      <div className="desayunos">
+        <p onClick={desayuno}>
           Desayunos <i class="fas fa-angle-down"></i>
         </p>				
 				{desplegarDesayuno &&
@@ -73,7 +73,7 @@ function Menu () {
 				}
 			</div>
     </section>
-  )
-};
+  );
+}
 
 export default Menu;
