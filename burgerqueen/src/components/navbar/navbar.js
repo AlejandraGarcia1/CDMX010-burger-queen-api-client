@@ -16,8 +16,8 @@ function Navbar () {
 		<div className = "nav">
 			<ul>
 				<li><Link to="/" className = "navMenu">Mesas</Link></li>
-				<li><Link to="/ordenLista" className = "navMenu">Ordenes en proceso </Link></li>
-				<li><a href= ".." className = "navMenu"> Ordenes listas </a></li>
+				<li><Link to="/OrdenesEnProceso" className = "navMenu">Ordenes en proceso </Link></li>
+				<li><Link to="/OrdenesListas" className = "navMenu">Ordenes Listas </Link></li>
 				<li><a href= ".." ><img src = { salir } alt = "salir" className = "salirApp"/> </a></li>			
 			</ul>		
 		</div>

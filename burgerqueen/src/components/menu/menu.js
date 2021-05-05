@@ -36,13 +36,9 @@ function Menu () {
         </p>
 				{desplegar &&
 					<ul className="desayuno" id="menu">
-           { items.map((item) => 
-           <li>{item.producto}</li>)}
-            {/* <li></li>
-						<li> Café americano </li>
-						<li> Café con leche </li>
-						<li> Sandwich de jamón y queso </li>
-						<li> Jugo de frutas natural </li> */}
+           { items.map((item, key) => 
+           <li key={key}>{item.producto}</li>)}
+            
 					</ul>			
 				}
       </div >

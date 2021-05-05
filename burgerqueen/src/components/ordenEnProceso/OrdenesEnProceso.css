@@ -1,0 +1,12 @@
+.pag-two{
+display: flex;
+flex-direction: column;
+align-items: stretch;
+flex-wrap: wrap;
+}
+.orden-en-preparacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}

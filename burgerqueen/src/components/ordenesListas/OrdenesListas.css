@@ -1,0 +1,12 @@
+.pages-tres{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
