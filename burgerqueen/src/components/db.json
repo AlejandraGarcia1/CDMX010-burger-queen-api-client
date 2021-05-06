@@ -4,32 +4,56 @@
       "id": 1, 
       "tipo": "Desayuno", 
       "producto": "Café americano", 
-      "precio": "5"				
+      "precio": "5",	
+			"imagen": "https://media.giphy.com/media/f3jw9wKWkRe98Ma05x/giphy.gif",
+			"ingredientes": [
+        "Café",
+        "Agua", 
+        "Azúcar" ]			
     }, 
     { 
       "id": 2, 
       "tipo":"Desayuno", 
       "producto":"Café con leche", 
-      "precio":"7" 
+      "precio":"7",
+			"imagen": "https://media.giphy.com/media/n1dS187aJllQxO6p1t/giphy.gif",
+			"ingredientes": [
+        "Café",
+        "Leche", 
+        "Azúcar",
+			  "Canela" ] 
     }, 
     { 
       "id": 3, 
       "tipo":"Desayuno", 
       "producto":"Sandwich de jamón y queso", 
-      "precio": "10"
+      "precio": "10",
+			"imagen": "https://media.giphy.com/media/0Pazxp18tkSvjycLI5/giphy.gif",
+			"ingredientes": [
+        "Pan",
+        "Jamón", 
+        "Queso",
+			  "Mayonesa",
+				"Jitomate",
+			  "Lechuga" ] 
     },
 		{ 
       "id": 4, 
       "tipo":"Desayuno", 
       "producto":"Jugo de frutas natural", 
-      "precio": "7"
+      "precio": "7",
+			"imagen": "https://media.giphy.com/media/dOibfAECJxn8RiHgEQ/giphy.gif",
+			"ingredientes": [
+        "Agua",
+        "Fruta de temporada", 
+        "Azúcar" ] 
     },
 		{ 
       "id": 5, 
       "tipo":"Hamburguesa", 
       "producto":"Hamburguesa simple", 
       "precio": "10",
-			"imagen": "../../images/hamburpng.png",
+			"imagen": "https://media.giphy.com/media/hzQhAMU4aEzeM/giphy.gif",
 			"ingredientes": [
         "Carne de res",
         "Jitomate", 

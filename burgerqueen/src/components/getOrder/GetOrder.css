@@ -1,12 +1,15 @@
 .mainCenter{
 	display: flex;
-	align-items: center;
-	justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-content: center;
+    margin: 20px;
 }
 
 .mainCard{
-	margin-left: 200px;
-	margin-top: 50px;
+	/* margin-left: 200px;
+	margin-top: 50px; */
 	
 }
 
@@ -16,5 +19,8 @@
 
 .mainMenu{
 	/* margin-top: -330px; */
+	    /* margin-top: -330px; */
+		margin: 3px auto;
+		width: 70%;
 	
 }
