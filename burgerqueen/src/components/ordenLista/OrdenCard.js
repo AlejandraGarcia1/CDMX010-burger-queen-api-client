@@ -7,6 +7,7 @@ export default function OrdenCard(props) {
 			<p> {props.cliente} </p>
        <hr className="division"></hr>
        <table className="ordenCompleta">
+           <tbody>
         <tr>
             <td>Hamburguesa doble</td>
             <td>$15</td>
@@ -23,11 +24,10 @@ export default function OrdenCard(props) {
            
         </tr>
         <tr>
-            <td></td>
-            <td className="total">Total $22.00</td>
-            <td></td>
+            <thead className="total">Total $22.00</thead>
+            
         </tr>
-        
+        </tbody>
         </table>
         <hr className="segundaDivision"></hr>
  </div>

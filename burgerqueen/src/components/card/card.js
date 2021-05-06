@@ -4,7 +4,10 @@ import hamburguesa from '../../images/hamburpng.png';
 import derecha from '../../images/derecha.png';
 import izquierda from '../../images/izquierda.png';
 
-function Card () {	
+function Card ({currentProduct}) {	
+	console.log(currentProduct);
+	const {producto, precio}= currentProduct
+	
 	const [contador, setContador] = useState(0);
 	const sumar = () => setContador(contador + 1);
 	const restar = () => setContador(contador !== 0 ? contador -1 : contador);
@@ -13,7 +16,7 @@ function Card () {
 		<section>
 		<div className = "backgroundCard">
 			<div>
-				<p className = "titulo">Hamburguesa doble $15</p>
+				<p className = "titulo">{producto} {precio}</p>
 				<hr className = "lineCard"></hr>
 			</div>
 			<div>				

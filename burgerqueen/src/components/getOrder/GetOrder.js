@@ -1,5 +1,4 @@
-// import React, { useState, useEffect } from 'react';
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Navbar from "../navbar/Navbar";
 import Titulo from "../titulo/Titulo";
@@ -11,24 +10,45 @@ import Footer from "../fotter/Footer";
 import "./GetOrder.css";
 
 function GetOrder() {
-  // const [breakfast, setBreakfast] = useState({});
+  const [items, setItems] = useState([]);
+  const [desayunos, setDesayunos] = useState([]);
+  const [currentProduct, setCurrentProduct] = useState(null);
+  //Función que ejecuta la petición
+  useEffect(() => {
+    obtenerDatos();
+  }, []);
+  //Función que solicita el menu
+  const obtenerDatos = async () => {
+    const data = await fetch("http://localhost:3000/menu");
+    console.log("soy la petición", data);
+    console.log("estatus", data.status);
+    //Guardamos la respuesta en formato JSON - es await porque esperamos la respuesta
+    const dataJson = await data.json();
+    setItems(dataJson);
+    setDesayunos(dataJson.filter((elemento) => elemento.tipo === "Desayuno"));
+    // console.log('data json', dataJson)
+  };
+  
 
-  // useEffect(() => {
-  // 	fetch('http://loqusea.com')
-  // 	.then((response) => setBreakfast(response))
-  // }, [])
+  function showDataEnCards(productId) {
+    console.log(productId);
+    const newCurrentProduct = items.find(({ id }) => id === productId);
+    console.log((newCurrentProduct));
+    setCurrentProduct(newCurrentProduct);
+  }
+  //const card=(e)=>console.log( filters.find((({producto}))=> producto) , 'targert', e.target , filters.findIndex( ));
 
   return (
     <div>
       <Navbar />
-      <Titulo text = "N° de Mesa"/>
+      <Titulo text="N° de Mesa" />
 
       <div className="mainCenter">
         <div className="mainMenu">
-          <Menu />
+          <Menu dataDesayuno={desayunos} showDataEnCards={showDataEnCards} />
         </div>
         <div className="mainCard">
-          <Card />
+          {!!currentProduct && <Card currentProduct={currentProduct} />}
         </div>
       </div>
 
