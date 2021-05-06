@@ -6,7 +6,10 @@ import izquierda from '../../images/izquierda.png';
 
 function Card ({currentProduct}) {	
 	console.log(currentProduct);
-	const {producto, precio, imagen, ingredientes}= currentProduct
+	// console.log(hamburguesas);
+	// console.log(acompañamientos);
+	// console.log(bebidas);
+	const {producto, precio, imagen, ingredientes} = currentProduct
 	
 	const [contador, setContador] = useState(0);
 	const sumar = () => setContador(contador + 1);

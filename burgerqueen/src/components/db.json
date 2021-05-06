@@ -64,43 +64,74 @@
       "id": 6, 
       "tipo":"Hamburguesa", 
       "producto":"Hamburguesa doble", 
-      "precio": "15"
+      "precio": "15",
+			"imagen": "https://media.giphy.com/media/3o7btUSpE2PJmm8gUg/giphy.gif",
+			"ingredientes": [
+        "Doble carne de res",
+        "Jitomate", 
+        "Lechuga", 
+        "Cebolla"]
     },		    
 		{ 
       "id": 7, 
       "tipo":"Acompañamiento", 
       "producto":"Papas fritas", 
-      "precio": "5"			
+      "precio": "5",
+			"imagen": "https://media.giphy.com/media/SqUOFGBWBurYLeDpjG/giphy.gif",
+			"ingredientes": [
+        "Papas picadas",
+        "Sal",
+			  "Condimentos" ]			
     },
 		{ 
       "id": 8, 
       "tipo":"Acompañamiento", 
       "producto":"Aros de cebolla", 
-      "precio": "5"
+      "precio": "5",
+			"imagen": "https://media.giphy.com/media/iabckpMq8lyRTkqhZe/giphy.gif",
+			"ingredientes": [
+        "Cebolla",
+        "Aceite",
+				"Harina",
+			  "Condimentos" ]	
     },  
 		{ 
 			"id": 9, 
 			"tipo":"Bebidas", 
 			"producto":"Agua 500ml", 
-			"precio": "5"	
+			"precio": "5",
+			"imagen": "https://media.giphy.com/media/TEiZee5NcgEB15Fo23/giphy.gif",
+			"ingredientes": [
+        "Agua" ]		
 		},
 		{ 
 			"id": 10, 
 			"tipo":"Bebidas", 
 			"producto":"Agua 750ml", 
-			"precio": "7"
+			"precio": "7",
+			"imagen": "https://media.giphy.com/media/1pAhuJJZcdIvy1Pmhx/giphy.gif",
+			"ingredientes": [
+        "Agua" ]
 		},
 		{ 
 			"id": 11, 
 			"tipo":"Bebidas", 
 			"producto":"Bebida/gaseosa 500ml", 
-			"precio": "7"
+			"precio": "7",
+			"imagen": "https://media.giphy.com/media/3oKIPclNX1FnVl652M/giphy.gif",
+			"ingredientes": [
+        "Agua carbonatada",
+			  "Saborizante artificial" ]
 		},
 		{ 
 			"id": 12, 
 			"tipo":"Bebidas", 
 			"producto":"Bebida/gaseosa 750ml", 
-			"precio": "10"
+			"precio": "10",
+			"imagen": "https://media.giphy.com/media/lnPfiLyjxUXVICTe4Z/giphy.gif",
+			"ingredientes": [
+        "Agua carbonatada",
+			  "Saborizante artificial" ]
 		}  
 	]
 }

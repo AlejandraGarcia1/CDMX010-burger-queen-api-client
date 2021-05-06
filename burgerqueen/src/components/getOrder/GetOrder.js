@@ -12,7 +12,12 @@ import "./GetOrder.css";
 function GetOrder() {
   const [items, setItems] = useState([]);
   const [desayunos, setDesayunos] = useState([]);
+	const [hamburguesas, setHamburguesas] = useState([]);
+	const [acompañamientos, setAcompañamientos] = useState([]);
+	const [bebidas, setBebidas] = useState([]);
   const [currentProduct, setCurrentProduct] = useState(null);
+
+
 	const [ticket, setTicket] = useState([]);
 	console.log(ticket, setTicket)
 
@@ -30,6 +35,9 @@ function GetOrder() {
     const dataJson = await data.json();
     setItems(dataJson);
     setDesayunos(dataJson.filter((elemento) => elemento.tipo === "Desayuno"));
+		setHamburguesas(dataJson.filter((elemento) => elemento.tipo === "Hamburguesa"));
+		setAcompañamientos(dataJson.filter((elemento) => elemento.tipo === "Acompañamiento"));
+		setBebidas(dataJson.filter((elemento) => elemento.tipo === "Bebidas"));
   };
 
 	// function getTable(table){
@@ -43,6 +51,9 @@ function GetOrder() {
     const newCurrentProduct = items.find(({ id }) => id === productId);
     console.log((newCurrentProduct));
     setCurrentProduct(newCurrentProduct);
+		// setHamburguesas(newCurrentProduct);
+		// setAcompañamientos(newCurrentProduct);
+		// setBebidas(newCurrentProduct);
   }
   //const card=(e)=>console.log( filters.find((({producto}))=> producto) , 'targert', e.target , filters.findIndex( ));
 
@@ -87,7 +98,8 @@ function GetOrder() {
       <Titulo />
       <div className="mainCenter">
         <div className="mainMenu">
-          <Menu dataDesayuno={desayunos} showDataEnCards={showDataEnCards} />
+          <Menu dataDesayuno={desayunos} showDataEnCards={showDataEnCards}
+					 dataHamburguesas={hamburguesas} dataAcompañamientos={acompañamientos} dataBebidas={bebidas} />
         </div>
         <div className="mainCard">
           {!!currentProduct && <Card currentProduct={currentProduct} />}

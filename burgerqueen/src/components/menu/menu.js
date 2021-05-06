@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Menu.css";
 
-function Menu({ dataDesayuno, showDataEnCards }) {
+function Menu({ dataDesayuno, showDataEnCards, dataHamburguesas, dataAcompañamientos, dataBebidas }) {
 	
   const [desplegarDesayuno, setDesplegarDesayuno] = useState(false);
   const desayuno = () => setDesplegarDesayuno(!desplegarDesayuno);
@@ -37,14 +37,28 @@ function Menu({ dataDesayuno, showDataEnCards }) {
             <div className="comida" id="menuDos">
               <p className="subcategory"> Hamburguesas </p>
               <ul>
-                <li></li>)
+								{dataHamburguesas.map(({id, producto}) => (
+									<li key={id} onClick={() => showDataEnCards(id) }>
+										{producto}
+									</li>
+								))}                
               </ul>
               <p className="subcategory"> Acompañamientos </p>
               <ul>
+								{dataAcompañamientos.map(({id, producto}) => (
+									<li key={id} onClick={() => showDataEnCards(id)}>
+										{producto}
+									</li>
+								))}
                 <li></li>
               </ul>
               <p className="subcategory"> Para tomar </p>
               <ul>
+								{dataBebidas.map(({id, producto}) => (
+									<li key={id} onClick={() => showDataEnCards(id)}>
+										{producto}
+									</li>
+								))}
                 <li></li>
               </ul>
             </div>
