@@ -39,7 +39,7 @@ function Menu () {
 				{desplegarDesayuno &&
 					<ul className="desayuno" id="menu">
            { items.filter((elemento)=> elemento.tipo === "Desayuno").map((item, key) => 
-           <li key={key}>{item.producto}</li>)
+           <li key={item.id}></li>)
 					 }          
 					</ul>			
 				}				
