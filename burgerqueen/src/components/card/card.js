@@ -6,9 +6,7 @@ import izquierda from '../../images/izquierda.png';
 
 function Card ({currentProduct}) {	
 	console.log(currentProduct);
-	// console.log(hamburguesas);
-	// console.log(acompañamientos);
-	// console.log(bebidas);
+	
 	const {producto, precio, imagen, ingredientes} = currentProduct
 	
 	const [contador, setContador] = useState(0);

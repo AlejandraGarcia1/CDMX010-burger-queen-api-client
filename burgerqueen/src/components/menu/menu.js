@@ -28,7 +28,6 @@ function Menu({ dataDesayuno, showDataEnCards, dataHamburguesas, dataAcompañami
             </ul>
           )}
         </div>
-
         <div className="comidas">
           <p onClick={comida} className="category">
             Comidas y cenas <i className="fas fa-angle-down"></i>
