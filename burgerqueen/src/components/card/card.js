@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+
 import './Card.css';
 // import hamburguesa from '../../images/hamburpng.png';
 import derecha from '../../images/derecha.png';
 import izquierda from '../../images/izquierda.png';
 
-function Card ({currentProduct}) {	
+function Card ({currentProduct, restar, sumar, contador, agregarNuevoPedido}) {	
 	console.log(currentProduct);
 	
 	const {producto, precio, imagen, ingredientes} = currentProduct
 	
-	const [contador, setContador] = useState(0);
-	const sumar = () => setContador(contador + 1);
-	const restar = () => setContador(contador !== 0 ? contador -1 : contador);
+	// const [contador, setContador] = useState(0);
+	// const sumar = () => setContador(contador + 1);
+	// const restar = () => setContador(contador !== 0 ? contador -1 : contador);
 
 	return (
 		<section>
@@ -40,7 +40,7 @@ function Card ({currentProduct}) {
 			</div>
 		</div>
 		<div>
-			<button className = "cardButton"> Agregar </button>
+			<button className = "cardButton" onClick={agregarNuevoPedido}> Agregar </button>
 		</div>
 		</section>
 	)
