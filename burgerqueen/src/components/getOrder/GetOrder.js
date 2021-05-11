@@ -18,6 +18,41 @@ function GetOrder() {
   const [contador, setContador] = useState(0);
   const[preOrden, setPreOrden]=useState([])
 
+  const [order, setOrder] = useState({
+    name: '',
+    mesa: null,
+    items: [],
+    total: 0
+  })
+
+  function getTotal(items) {
+    return items.reduce((total, item) => {
+      return total + item.price * item.quantity
+    }, 0)
+  }
+  function addItem(quantity) {
+    const foundItem = order.items.find((item) => item.id === currentProduct.id)
+    if (foundItem) {
+      foundItem.quantity = quantity
+      const filteredItems = order.items.filter((item) => item.id !== currentProduct.id)
+      const newItems = [...filteredItems, foundItem]
+      const total = getTotal(newItems)
+      setOrder({
+        ...order,
+        items: newItems,
+        total
+    } else {
+      const newItems = [...order.items, {...currentProduct, quantity }] 
+      const total = getTotal(newItems)
+
+      setOrder({ 
+        ...order, 
+        items:newItems,
+        total
+      })
+    }
+  }
+
 
 
 function agregarNuevoPedido() {
@@ -173,7 +208,7 @@ function agregarNuevoPedido() {
         </div>
       </div>
       <div className="mainOrden">
-        <Orden preOrden={preOrden}/>
+        <Orden preOrden={preOrden} order={order} />
       </div>
       <Footer />
     </div>
