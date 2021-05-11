@@ -16,14 +16,14 @@ function GetOrder() {
   const [mesa, setMesa] = useState("");
   const [name, setName] = useState("");
   const [contador, setContador] = useState(0);
+  const[preOrden, setPreOrden]=useState([])
 
-// const [pedido, setPedido]= useState([]);
 
 
-// function agregarNuevoPedido() {
-// 	console.log( setPedido({'mesa':'', 'contador':,currentProduct}))
-// 	console.log(pedido);
-// }
+function agregarNuevoPedido() {
+	setPreOrden([...preOrden ,{...currentProduct, contador:contador, nombre:name, mesa:mesa} ])
+	console.log('preOrden', preOrden);
+}
 	function sumar() {
 		setContador(contador +1)
 	}
@@ -43,8 +43,8 @@ function GetOrder() {
   //Función que solicita el menu
   const obtenerDatos = async () => {
     const data = await fetch("http://localhost:3000/menu");
-    console.log("soy la petición", data);
-    console.log("estatus", data.status);
+    // console.log("soy la petición", data);
+    // console.log("estatus", data.status);
     //Guardamos la respuesta en formato JSON - es await porque esperamos la respuesta
     const dataJson = await data.json();
     setItems(dataJson);
@@ -69,7 +69,7 @@ function GetOrder() {
   function getNumMesa(e) {
     const numeroDeMesa = e.target.value;
     setMesa(numeroDeMesa);
-    console.log("numero de mesa", numeroDeMesa);
+    // console.log("numero de mesa", numeroDeMesa);
   }
 
     function getName(event) {
@@ -169,11 +169,11 @@ function GetOrder() {
           />
         </div>
         <div className="mainCard">
-          {!!currentProduct && <Card sumar={sumar} restar={restar} currentProduct={currentProduct} contador={contador} />}
+          {!!currentProduct && <Card sumar={sumar} restar={restar} currentProduct={currentProduct} contador={contador} agregarNuevoPedido={agregarNuevoPedido} />}
         </div>
       </div>
       <div className="mainOrden">
-        <Orden />
+        <Orden preOrden={preOrden}/>
       </div>
       <Footer />
     </div>
