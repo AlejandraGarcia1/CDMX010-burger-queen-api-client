@@ -13,12 +13,17 @@ function GetOrder() {
 	const [acompañamientos, setAcompañamientos] = useState([]);
 	const [bebidas, setBebidas] = useState([]);
   const [currentProduct, setCurrentProduct] = useState(null);
-	const [mesa, setMesa] = useState('');
-	const [name, setName] = useState('');
+	const [mesa, setMesa] = useState('');	
+		const [name, setName] = useState('')
+	const [contador, setContador] = useState(0);
 
 
-	// const [ticket, setTicket] = useState([]);
-	
+	function sumar () {
+		setContador(contador +1);
+	};
+	function restar () {
+		setContador(contador !== 0 ? contador -1 : contador);
+	};
 
   //Función que ejecuta la petición
   useEffect(() => {
@@ -53,9 +58,14 @@ function GetOrder() {
 		console.log('numero de mesa', numeroDeMesa);
 	 }
 	
-	// function getName(e){	// 	
-	// 	setName(e.target.value)
-	// }
+	function getName(event){		
+		// console.log('nombre del usuario', e.target.value)
+		setName(event.target.value)
+		console.log('soy name',name)
+		
+		// console.log('nombre', setName(e.target.value))
+		// console.log('aqui', name)
+	}
 	
 	function Titulo () {	
 	return(
@@ -73,7 +83,7 @@ function GetOrder() {
 			</div>		
 			<div className = "cliente">
 				<p className = "nombre"> Nombre del cliente: </p>
-				<input type = "text" className = "nombreInput" onChange={(e) => setName(e.target.value)}></input>
+				<input type = "text" className = "nombreInput" value={name} onChange={getName}></input>
 			</div>	
 			<hr className = "line"></hr> 
 		</div>
@@ -85,7 +95,7 @@ function GetOrder() {
     <div>
       <Navbar /> 
 			{mesa} 
-			{/* {name}     */}
+			{name}    
       <Titulo />
       <div className="mainCenter">
         <div className="mainMenu">
@@ -93,7 +103,8 @@ function GetOrder() {
 					 dataHamburguesas={hamburguesas} dataAcompañamientos={acompañamientos} dataBebidas={bebidas} />
         </div>
         <div className="mainCard">
-          {!!currentProduct && <Card currentProduct={currentProduct} />}
+          {!!currentProduct && <Card currentProduct={currentProduct} sumar={sumar} restar={restar}
+					 contador={contador} />}
         </div>
       </div>
       <div className="mainOrden">
