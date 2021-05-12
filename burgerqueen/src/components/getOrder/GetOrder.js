@@ -3,7 +3,7 @@ import "./GetOrder.css";
 import Navbar from "../navbar/Navbar";
 import Menu from "../menu/menu";
 import Card from "../card/card";
-import Orden from "../orden/Orden";
+import Orden from "../orden/orden";
 import Footer from "../fotter/Footer";
 
 function GetOrder() {
@@ -173,7 +173,7 @@ function agregarNuevoPedido() {
         </div>
       </div>
       <div className="mainOrden">
-        <Orden preOrden={preOrden}/>
+        {preOrden && <Orden preOrden={preOrden}/>}
       </div>
       <Footer />
     </div>
